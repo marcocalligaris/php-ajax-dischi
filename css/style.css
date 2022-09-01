@@ -1,7 +1,25 @@
 body {
-    background-color: black;
-};
-
+    background-color: #1E2D3B;
+}
+header {
+    background-color: #2E3A46;
+}
 header img {
-    width: 60px;
+    width: 50px;
+}
+.column {
+    width: calc(100% / 5);
+}
+.disc-card {
+    background-color: #2E3A46;
+    height: 450px;
+}
+a {
+    text-decoration: none;
+}
+.disc-card h3 {
+    color: white;
+}
+.disc-card h5,p {
+    color: grey;
 }
