@@ -25,7 +25,7 @@
         <!-- CORPO PRINCIPALE CON GALLERY -->
         <main>
             <div class="container py-5">
-                <div class="row g-4 d-flex flex-wrap">
+                <div v-if="discs.length" class="row g-4 d-flex flex-wrap">
                     <div v-for="disc in discs" class="column">
                         <a class="text-decoration-none" href="#">
                             <div class="disc-card p-3 text-center">
@@ -37,6 +37,7 @@
                         </a>
                     </div>            
                 </div>
+                <h3 class="text-white" v-else>Nessun disco da mostrare</h3>
             </div>
         </main>
     </div>
