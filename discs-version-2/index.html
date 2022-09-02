@@ -23,24 +23,22 @@
             </div>
         </header>
         <!-- CORPO PRINCIPALE CON GALLERY -->
-        <!-- <main>
+        <main>
             <div class="container py-5">
                 <div class="row g-4 d-flex flex-wrap">
-                    <?php foreach ($discs as $disc) { ?>                
-                        <div class="column">
-                            <a class="text-decoration-none" href="#">
-                                <div class="disc-card p-3 text-center">
-                                    <img class="w-100 mb-4" src="<?php echo $disc['poster'] ?>" alt="<?php echo $disc['title'] ?>">
-                                    <h3 class="mb-4"><?php echo strtoupper($disc['title']) ?></h3>
-                                    <h5><?php echo $disc['author'] ?></h5>
-                                    <p><?php echo $disc['year'] ?></p>
-                                </div>
-                            </a>
-                        </div>
-                    <?php } ?>
+                    <div v-for="disc in discs" class="column">
+                        <a class="text-decoration-none" href="#">
+                            <div class="disc-card p-3 text-center">
+                                <img class="w-100 mb-4" :src="disc.poster" :alt="disc.title">
+                                <h3 class="mb-4">{{ disc.title }}</h3>
+                                <h5>{{ disc.author }}</h5>
+                                <p>{{ disc.year }}</p>
+                            </div>
+                        </a>
+                    </div>            
                 </div>
             </div>
-        </main> -->
+        </main>
     </div>
     <script src="js/script.js"></script>
 </body>
